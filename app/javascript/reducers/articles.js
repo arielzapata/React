@@ -15,7 +15,7 @@ function articlesReducer(state = articlesState, action) {
   switch (action.type){
     case ADD_ARTICLE:
     return [
-      ...state,
+        state,
       {
         id: 'fff',
         title: action.title,

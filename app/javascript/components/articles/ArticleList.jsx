@@ -5,14 +5,14 @@ import {addArticle, allArticles} from '../../actions/articles';
 
 function ArticleList(props) {
 
-  // componentDidMount() {
-  //   this.props.listArticles();
-  // }
-
+  useEffect(() => {
+    props.listArticles();
+  },[]);
+  
   return (
     <div>
       {
-        this.props.articles.map((article) => {
+        props.articles.map((article) => {
           return(
             <div key={article.id}>
               <h2><Link to={`/articles/${article.id}`}>{article.title}</Link></h2>
@@ -22,7 +22,7 @@ function ArticleList(props) {
           );
         })
       }
-      <button onClick={() => this.props.addArticle('Hola', 'Holi')} className="btn btn-outline-primary">Create Article</button>
+  <Link to="/articles/new" className="btn btn-outline-primary">Create Article</Link> 
     </div>
   );
 }

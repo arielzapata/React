@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React, {Component, useState} from 'react';
 import Menu from './Menu';
 import Routes from './Routes';
 import { HashRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../store';
 
-class App extends Component {
-  render() {
+function App () {
     return (
       <Provider store={store}>
         <div className="App">
@@ -18,8 +17,7 @@ class App extends Component {
           </Router>
         </div>
       </Provider>
-    );
-  }
+    ); 
 }
 
 export default App;

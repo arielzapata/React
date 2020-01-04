@@ -1,19 +1,23 @@
+import axios from 'axios';
+
 class ArticlesApi {
   static getArticles() {
-    return fetch('api/articles')
-      .then(response => {
-        return response.json();
-      })
+    return axios.get('api/articles')
+    .then(res => {
+      const articl = res.data;
+      return articl;
+    })
       .catch(error => {
         return error;
       });
   }
 
   static getArticle(id){
-    return fetch(`api/articles/${id}`)
-      .then(response => {
-        return response.json();
-      })
+    return axios.get(`api/articles/${id}`)
+    .then(res => {
+      const articl = res.data;
+      return articl;
+    })
       .catch(error => {
         return error;
       });
@@ -21,3 +25,4 @@ class ArticlesApi {
 }
 
 export default ArticlesApi;
+
