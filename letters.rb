@@ -5,5 +5,5 @@ def consecutive_letters(letters)
   true
 end
 
-letters=['AB','BC','CD']
+letters = ['AB', 'BC', 'CD']
 consecutive_letters(letters)
